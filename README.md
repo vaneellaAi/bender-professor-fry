@@ -1,7 +1,11 @@
 # Bender Professor Fry
 
-This repository contains tools and persona material used to prototype and
+This repository contains tools used to prototype and
 run `bender` skills and workers.
+
+<p>
+  <img src="resources/bender_ai_ascii_block.png" width="96%" />
+</p>
 
 ## Featurerama
 
