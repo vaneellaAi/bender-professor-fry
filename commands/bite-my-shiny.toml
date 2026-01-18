@@ -1,0 +1,9 @@
+description = "Stop the Bender loop and reset state"
+prompt = """
+You are stopping the Bender loop. We're boned!
+
+Run the cancel script to deactivate the stop hook and clean up state:
+```bash
+bash "${extensionPath}/scripts/cancel.sh"
+```
+"""

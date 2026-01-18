@@ -1,0 +1,49 @@
+{
+  "hooks": {
+    "BeforeAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "increment-iteration",
+            "type": "command",
+            "command": "bash ${extensionPath}/hooks/increment-iteration.sh",
+            "description": "Increments the iteration"
+          },
+          {
+            "name": "reinforce-bender-persona",
+            "type": "command",
+            "command": "bash ${extensionPath}/hooks/reinforce-persona.sh",
+            "description": "Injects persona directives to ensure the agent explains its steps"
+          }
+        ]
+      }
+    ],
+    "BeforeModel": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "check-limit",
+            "type": "command",
+            "command": "bash ${extensionPath}/hooks/check-limit.sh",
+            "description": "Checks if the iteration or time limit has been reached"
+          }
+        ]
+      }
+    ],
+    "AfterAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "name": "bender-loop",
+            "type": "command",
+            "command": "bash ${extensionPath}/hooks/stop-hook.sh",
+            "description": "The Bender infinite loop mechanism"
+          }
+        ]
+      }
+    ]
+  }
+}
